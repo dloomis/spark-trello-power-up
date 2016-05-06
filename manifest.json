@@ -1,11 +1,11 @@
 {
-  "name": "Static Template",
+  "name": "Cisco Spark Trello Power-Up",
   "description": "",
-  "details": "A static sample Power-Up hosted on GitHub pages. Feel free to fork [this repository](https://github.com/trello/power-up-template) as a starting point for your own Power-Up.",
+  "details": "A Trello Power-Up that integrates with Cisco Spark",
   "icon": {
     "url": "./images/logo.png"
   },
-  "author": "Trello Inc",
+  "author": "Dan Loomis",
   "capabilities": [
     "attachment-sections",
     "attachment-thumbnail",
