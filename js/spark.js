@@ -67,7 +67,7 @@ var getBadges = function(t){
   })
 };
 */
-/*
+
 var formatNPSUrl = function(t, url){
   if(!/^https?:\/\/www\.nps\.gov\/[a-z]{4}\//.test(url)){
     return null;
@@ -79,7 +79,6 @@ var formatNPSUrl = function(t, url){
     return null;
   }
 };
-*/
 /*
 var boardButtonCallback = function(t){
   return t.popup({
