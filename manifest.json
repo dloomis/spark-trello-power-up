@@ -10,15 +10,6 @@
     "callback",
     "card-buttons",
     "show-settings"
-    /*
-    "attachment-sections",
-    "attachment-thumbnail",
-    "board-buttons",
-    "card-badges",
-    "card-detail-badges",
-    "card-from-url",
-    "format-url"
-    */
   ],
   "connectors": {
     "iframe": {
