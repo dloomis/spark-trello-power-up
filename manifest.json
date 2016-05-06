@@ -7,15 +7,15 @@
   },
   "author": "Dan Loomis",
   "capabilities": [
-    //"attachment-sections",
-    //"attachment-thumbnail",
-    //"board-buttons",
+    "attachment-sections",
+    "attachment-thumbnail",
+    "board-buttons",
     "callback",
-    //"card-badges",
+    "card-badges",
     "card-buttons",
-    //"card-detail-badges",
-    //"card-from-url",
-    //"format-url",
+    "card-detail-badges",
+    "card-from-url",
+    "format-url",
     "show-settings"
   ],
   "connectors": {
