@@ -129,12 +129,14 @@ var cardButtonCallback = function(t){
   });
   return t.popup({
     title: 'Cisco Spark',
-    items: items,
+    items: items
+    /*
     search: {
       count: 5,
       placeholder: 'Search National Parks',
       empty: 'No parks found'
     }
+    */
   });
 };
 
