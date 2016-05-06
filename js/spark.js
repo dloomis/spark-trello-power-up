@@ -3,6 +3,7 @@
 var WHITE_ICON = './images/icon-white.svg';
 var GRAY_ICON = './images/icon-gray.svg';
 
+/*
 var parkMap = {
   acad: 'Acadia National Park',
   arch: 'Arches National Park',
@@ -18,7 +19,8 @@ var parkMap = {
   yose: 'Yosemite National Park',
   zion: 'Zion National Park'
 };
-
+*/
+/*
 var getBadges = function(t){
   return t.card('name')
   .get('name')
@@ -66,7 +68,8 @@ var getBadges = function(t){
     }
   })
 };
-
+*/
+/*
 var formatNPSUrl = function(t, url){
   if(!/^https?:\/\/www\.nps\.gov\/[a-z]{4}\//.test(url)){
     return null;
@@ -78,7 +81,8 @@ var formatNPSUrl = function(t, url){
     return null;
   }
 };
-
+*/
+/*
 var boardButtonCallback = function(t){
   return t.popup({
     title: 'Popup List Example',
@@ -110,8 +114,9 @@ var boardButtonCallback = function(t){
     ]
   });
 };
-
+*/
 var cardButtonCallback = function(t){
+  /*
   var items = Object.keys(parkMap).map(function(parkCode){
     var urlForCode = 'http://www.nps.gov/' + parkCode + '/';
     return {
@@ -125,19 +130,22 @@ var cardButtonCallback = function(t){
       }
     };
   });
-
+*/
   return t.popup({
-    title: 'Popup Search Example',
-    items: items,
+    title: 'Cisco Spark',
+    //items: items,
+    /*
     search: {
       count: 5,
       placeholder: 'Search National Parks',
       empty: 'No parks found'
     }
+    */
   });
 };
 
 TrelloPowerUp.initialize({
+  /*
   'attachment-sections': function(t, options){
     // options.entries is a list of the attachments for this card
     // you can look through them and 'claim' any that you want to
@@ -171,6 +179,8 @@ TrelloPowerUp.initialize({
       return [];
     }
   },
+  */
+  /*
   'attachment-thumbnail': function(t, options){
     var parkName = formatNPSUrl(t, options.url);
     if(parkName){
@@ -189,6 +199,8 @@ TrelloPowerUp.initialize({
       throw t.NotHandled();
     }
   },
+  */
+  /*
   'board-buttons': function(t, options){
     return [{
       icon: WHITE_ICON,
@@ -196,19 +208,25 @@ TrelloPowerUp.initialize({
       callback: boardButtonCallback
     }];
   },
+  */
+  /*
   'card-badges': function(t, options){
     return getBadges(t);
   },
+  */
   'card-buttons': function(t, options) {
     return [{
       icon: GRAY_ICON,
-      text: 'Spark',
+      text: 'Cisco Spark',
       callback: cardButtonCallback
     }];
   },
+  /*
   'card-detail-badges': function(t, options) {
     return getBadges(t);
   },
+  */
+  /*
   'card-from-url': function(t, options) {
     var parkName = formatNPSUrl(t, options.url);
     if(parkName){
@@ -220,6 +238,8 @@ TrelloPowerUp.initialize({
       throw t.NotHandled();
     }
   },
+  */
+  /*
   'format-url': function(t, options) {
     var parkName = formatNPSUrl(t, options.url);
     if(parkName){
@@ -231,6 +251,8 @@ TrelloPowerUp.initialize({
       throw t.NotHandled();
     }
   },
+  */
+  /*
   'show-settings': function(t, options){
     return t.popup({
       title: 'Settings',
@@ -238,4 +260,5 @@ TrelloPowerUp.initialize({
       height: 184
     });
   }
+  */
 });

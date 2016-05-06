@@ -1,5 +1,5 @@
 {
-  "name": "Cisco Spark Trello Power-Up",
+  "name": "Cisco Spark",
   "description": "",
   "details": "A Trello Power-Up that integrates with Cisco Spark",
   "icon": {
@@ -7,16 +7,16 @@
   },
   "author": "Dan Loomis",
   "capabilities": [
-    "attachment-sections",
-    "attachment-thumbnail",
-    "board-buttons",
+    //"attachment-sections",
+    //"attachment-thumbnail",
+    //"board-buttons",
     "callback",
-    "card-badges",
+    //"card-badges",
     "card-buttons",
-    "card-detail-badges",
-    "card-from-url",
-    "format-url",
-    "show-settings"
+    //"card-detail-badges",
+    //"card-from-url",
+    //"format-url",
+    //"show-settings"
   ],
   "connectors": {
     "iframe": {
