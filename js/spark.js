@@ -132,7 +132,7 @@ var cardButtonCallback = function(t){
   });
 */
   return t.popup({
-    title: 'Cisco Spark',
+    title: 'Cisco Spark'
     //items: items,
     /*
     search: {
@@ -252,7 +252,6 @@ TrelloPowerUp.initialize({
     }
   },
   */
-
   'show-settings': function(t, options){
     return t.popup({
       title: 'Settings',
