@@ -12,11 +12,11 @@
     //"board-buttons",
     "callback",
     //"card-badges",
-    "card-buttons"
+    "card-buttons",
     //"card-detail-badges",
     //"card-from-url",
     //"format-url",
-    //"show-settings"
+    "show-settings"
   ],
   "connectors": {
     "iframe": {
