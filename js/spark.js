@@ -116,7 +116,7 @@ var boardButtonCallback = function(t){
 };
 */
 var cardButtonCallback = function(t){
-  /*
+ 
   var items = Object.keys(parkMap).map(function(parkCode){
     var urlForCode = 'http://www.nps.gov/' + parkCode + '/';
     return {
@@ -130,10 +130,9 @@ var cardButtonCallback = function(t){
       }
     };
   });
-*/
   return t.popup({
-    title: 'Cisco Spark'
-    //items: items,
+    title: 'Cisco Spark',
+    items: items
     /*
     search: {
       count: 5,
