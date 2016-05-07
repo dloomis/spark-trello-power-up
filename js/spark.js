@@ -128,7 +128,12 @@ var cardButtonCallback = function(t){
     };
   });
   */
-  var items = {room1:"Send to RTP Disc Golf 2016", room2:"Send to DPM PMO", sendto:"Send to Room"};
+  var items = {
+    "Send to RTP Disc Golf 2016":"room1",
+    "Send to DPM PMO":"room2",
+    "Send to Room":"sendtoroom"
+  };
+  
   return t.popup({
     title: 'Cisco Spark',
     items: items
