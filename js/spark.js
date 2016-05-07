@@ -113,7 +113,7 @@ var boardButtonCallback = function(t){
 };
 */
 var cardButtonCallback = function(t){
- 
+ /*
   var items = Object.keys(parkMap).map(function(parkCode){
     var urlForCode = 'http://www.nps.gov/' + parkCode + '/';
     return {
@@ -127,6 +127,8 @@ var cardButtonCallback = function(t){
       }
     };
   });
+  */
+  var items = {room1:"Send to RTP Disc Golf 2016", room2:"Send to DPM PMO", sendto:"Send to Room"};
   return t.popup({
     title: 'Cisco Spark',
     items: items
