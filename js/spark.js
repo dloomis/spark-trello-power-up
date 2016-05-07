@@ -3,6 +3,7 @@
 var WHITE_ICON = './images/icon-white.svg';
 var GRAY_ICON = './images/icon-gray.svg';
 
+/*
 var parkMap = {
   acad: 'Acadia National Park',
   arch: 'Arches National Park',
@@ -18,6 +19,8 @@ var parkMap = {
   yose: 'Yosemite National Park',
   zion: 'Zion National Park'
 };
+*/
+
 /*
 var getBadges = function(t){
   return t.card('name')
@@ -128,11 +131,32 @@ var cardButtonCallback = function(t){
     };
   });
   */
+  var sparkButtonMenuItems = {
+    sendtoRoom1:  'Send to Room 1',
+    sendtoRoom2:  'Send to Room 2',
+    sendtoRoom3:  'Send to Room 3',
+    sendReminder: 'Send Reminder to:'
+  };
+  
+  var items = Object.keys(sparkButtonMenuItems).map(function(sparkMenuCode){
+    return {
+      text: sparkButtonMenuItems[sparkMenuCode],
+      callback: function(t) {
+        return t.attach(text)
+        .then(function(){
+              return t.closePopup();
+            })
+      }
+    }
+  });
+  
+  /*
   var items = {
     "Send to RTP Disc Golf 2016":"room1",
     "Send to DPM PMO":"room2",
     "Send to Room":"sendtoroom"
   };
+  */
   
   return t.popup({
     title: 'Cisco Spark',
