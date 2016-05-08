@@ -142,7 +142,7 @@ var cardButtonCallback = function(t){
     return {
       text: sparkButtonMenuItems[sparkMenuCode],
       callback: function(t) {
-        return t.attach(text)
+        return t.attach("text")
         .then(function(){
               return t.closePopup();
             })
