@@ -78,9 +78,7 @@ var cardButtonCallback = function(t){
           callback: function(t) {
             return t.popup({
               title: 'Success',
-              items:[
-                {text: 'Card sent successfully to: ' + selectedRoom.roomName}
-              ]
+              url: './settings.html'
             })
           }
         },
