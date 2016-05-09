@@ -8,8 +8,6 @@
   "author": "Dan Loomis",
   "capabilities": [
     "callback",
-    "card-buttons",
-    "board-buttons",
     "show-settings"
   ],
   "connectors": {
