@@ -3,6 +3,8 @@
 var WHITE_ICON = './images/icon-white.svg';
 var GRAY_ICON = './images/icon-gray.svg';
 
+var selectedRoom = {roomId, roomName};
+
 /*
 var parkMap = {
   acad: 'Acadia National Park',
@@ -89,7 +91,7 @@ var cardButtonCallback = function(t){
       title: 'Cisco Spark',
       items: [
         {
-          text: 'Send to: RTP Disc Golf 2016',
+          text: selectedRoom.roomName,
           callback: function(t) {return t.popup({title: t.text})}
         },
         {
@@ -209,10 +211,14 @@ TrelloPowerUp.initialize({
   },
   
   'board-buttons': function(t, board){
+    
+    selectedRoom.roomId = '37f54db0-d2ee-11e4-8431-8151e0e5cc19';
+    selectedRoom.roomName = 'RTP Disc Golf 2016';
+    
     return [{
-      icon: WHITE_ICON,
-      text: 'Cisco Spark: RTP Disc Golf 2016',
-      url: 'https://web.ciscospark.com/#/rooms/37f54db0-d2ee-11e4-8431-8151e0e5cc19'
+      icon: './images/logo_spark_256px.png',
+      text: selectedRoom.roomName,
+      url: 'https://web.ciscospark.com/#/rooms/' + selectedRoom.roomId
     }];
   },
   /*
