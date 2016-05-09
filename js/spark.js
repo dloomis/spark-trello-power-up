@@ -82,6 +82,26 @@ var formatNPSUrl = function(t, url){
     return null;
   }
 };
+
+var cardButtonCallback = function(t){
+  
+    return t.popup({
+      title: 'Cisco Spark',
+      items: [
+        {text: 'Send to: RTP Disc Golf 2016'},
+        {
+          text: 'Send to room...',
+          callback: function(t) {
+            return t.popup({
+              title: 'Select Room',
+              items: [{text: 'Room 1'}, {text: 'Room 2'}, {text: 'Room 3'}, {text: 'Room 4'}, {text: 'Room 5'}]
+            });  
+          }
+        }
+      ]
+    });
+}
+
 /*
 var boardButtonCallback = function(t){
   return t.popup({
@@ -114,33 +134,6 @@ var boardButtonCallback = function(t){
     ]
   });
 };
-*/
-
-var selectSparkRoom = function(t) {
-  
-}
-
-var cardButtonCallback = function(t){
-  
-    return t.popup({
-      title: 'Cisco Spark',
-      items: [
-        {text: 'Send to: RTP Disc Golf 2016'},
-        {
-          text: 'Send to room...',
-          callback: function(t) {
-            return t.popup({
-              title: 'Select Room',
-              items: [{text: 'Room 1'}, {text: 'Room 2'}, {text: 'Room 3'}, {text: 'Room 4'}, {text: 'Room 5'}]
-            });  
-          }
-        },
-        {text: 'Remind me about this card...'},
-        {text: 'Remind someone about this card...'},
-        {text: 'Remind room about this card...'}
-      ]
-    });
-}
 
 TrelloPowerUp.initialize({
   /*
@@ -199,15 +192,6 @@ TrelloPowerUp.initialize({
   },
   */
   /*
-  'board-buttons': function(t, options){
-    return [{
-      icon: WHITE_ICON,
-      text: 'Template',
-      callback: boardButtonCallback
-    }];
-  },
-  */
-  /*
   'card-badges': function(t, options){
     return getBadges(t);
   },
@@ -217,6 +201,14 @@ TrelloPowerUp.initialize({
       icon: GRAY_ICON,
       text: 'Cisco Spark',
       callback: cardButtonCallback
+    }];
+  },
+  
+  'board-buttons': function(t, options){
+    return [{
+      icon: WHITE_ICON,
+      text: 'Cisco Spark: RTP Disc Golf 2016',
+      url: 'https://web.ciscospark.com/#/rooms/37f54db0-d2ee-11e4-8431-8151e0e5cc19'
     }];
   },
   /*
