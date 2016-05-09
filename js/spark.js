@@ -116,59 +116,18 @@ var boardButtonCallback = function(t){
 };
 */
 var cardButtonCallback = function(t){
- /*
-  var items = Object.keys(parkMap).map(function(parkCode){
-    var urlForCode = 'http://www.nps.gov/' + parkCode + '/';
-    return {
-      text: parkMap[parkCode],
-      url: urlForCode,
-      callback: function(t){
-        return t.attach({ url: urlForCode, name: parkMap[parkCode] })
-        .then(function(){
-          return t.closePopup();
-        })
-      }
-    };
-  });
-  */
-  var sparkButtonMenuItems = {
-    sendtoRoom1:  'Send to Room 1',
-    sendtoRoom2:  'Send to Room 2',
-    sendtoRoom3:  'Send to Room 3',
-    sendReminder: 'Send Reminder to:'
-  };
   
-  var items = Object.keys(sparkButtonMenuItems).map(function(sparkMenuCode){
-    return {
-      text: sparkButtonMenuItems[sparkMenuCode],
-      callback: 
-        function(t) {
-          return t.popup({title:'Message Sent'})
-          .then (function() {
-              return t.closePopup();
-          })
-        }
-        //return t.attach({url: "http://www.google.com", name: sparkButtonMenuItems[sparkMenuCode] })
-        /*
-        .then(function(){
-              return t.closePopup();
-            })
-        */
-    }
-  });
-    
-  return t.popup({
-    title: 'Cisco Spark',
-    items: items
-    /*
-    search: {
-      count: 5,
-      placeholder: 'Search National Parks',
-      empty: 'No parks found'
-    }
-    */
-  })
-};
+    return t.popup({
+      title: 'Cisco Spark',
+      items: [
+        {text: 'Send to: RTP Disc Golf 2016'},
+        {text: 'Send to room...'},
+        {text: 'Remind me about this card...'},
+        {text: 'Remind someone about this card...'},
+        {text: 'Remind room about this card...'}
+      ]
+    });
+}
 
 TrelloPowerUp.initialize({
   /*
