@@ -77,8 +77,8 @@ var cardButtonCallback = function(t){
           text: 'Send to: ' + selectedRoom.roomName,
           callback: function(t) {
             return t.popup({
-              title: 'Success',
-              url: './settings.html'
+              title: 'Message sent',
+              url: './message-sent-confirmation.html'
             })
           }
         },
