@@ -115,13 +115,26 @@ var boardButtonCallback = function(t){
   });
 };
 */
+
+var selectSparkRoom = function(t) {
+  
+}
+
 var cardButtonCallback = function(t){
   
     return t.popup({
       title: 'Cisco Spark',
       items: [
         {text: 'Send to: RTP Disc Golf 2016'},
-        {text: 'Send to room...'},
+        {
+          text: 'Send to room...',
+          callback: function(t) {
+            return t.popup({
+              title: 'Select Room',
+              items: [{text: 'Room 1'}, {text: 'Room 2'}, {text: 'Room 3'}, {text: 'Room 4'}, {text: 'Room 5'}]
+            });  
+          }
+        },
         {text: 'Remind me about this card...'},
         {text: 'Remind someone about this card...'},
         {text: 'Remind room about this card...'}
