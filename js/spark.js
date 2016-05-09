@@ -141,23 +141,16 @@ var cardButtonCallback = function(t){
   var items = Object.keys(sparkButtonMenuItems).map(function(sparkMenuCode){
     return {
       text: sparkButtonMenuItems[sparkMenuCode],
-      callback: function(t) {
-        return t.attach({url: "http://www.google.com", name: sparkButtonMenuItems[sparkMenuCode] })
+      callback: function(t) {return t.closePopup()}
+        //return t.attach({url: "http://www.google.com", name: sparkButtonMenuItems[sparkMenuCode] })
+        /*
         .then(function(){
               return t.closePopup();
             })
-      }
-    }
+        */
+    };
   });
-  
-  /*
-  var items = {
-    "Send to RTP Disc Golf 2016":"room1",
-    "Send to DPM PMO":"room2",
-    "Send to Room":"sendtoroom"
-  };
-  */
-  
+    
   return t.popup({
     title: 'Cisco Spark',
     items: items
