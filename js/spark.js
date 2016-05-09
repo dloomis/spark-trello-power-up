@@ -141,14 +141,20 @@ var cardButtonCallback = function(t){
   var items = Object.keys(sparkButtonMenuItems).map(function(sparkMenuCode){
     return {
       text: sparkButtonMenuItems[sparkMenuCode],
-      callback: function(t) {return t.closePopup()}
+      callback: 
+        function(t) {
+          return t.popup({title:'Message Sent'})
+          .then (function() {
+              return t.closePopup();
+          })
+        }
         //return t.attach({url: "http://www.google.com", name: sparkButtonMenuItems[sparkMenuCode] })
         /*
         .then(function(){
               return t.closePopup();
             })
         */
-    };
+    }
   });
     
   return t.popup({
@@ -161,7 +167,7 @@ var cardButtonCallback = function(t){
       empty: 'No parks found'
     }
     */
-  });
+  })
 };
 
 TrelloPowerUp.initialize({
