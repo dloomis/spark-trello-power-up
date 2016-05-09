@@ -88,7 +88,10 @@ var cardButtonCallback = function(t){
     return t.popup({
       title: 'Cisco Spark',
       items: [
-        {text: 'Send to: RTP Disc Golf 2016'},
+        {
+          text: 'Send to: RTP Disc Golf 2016',
+          callback: function(t) {return t.popup({title: t.text})}
+        },
         {
           text: 'Send to room...',
           callback: function(t) {
