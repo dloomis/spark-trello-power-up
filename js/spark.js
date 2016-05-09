@@ -208,8 +208,8 @@ TrelloPowerUp.initialize({
   'board-buttons': function(t, board){
     return [{
       icon: WHITE_ICON,
-      text: 'Cisco Spark: RTP Disc Golf 2016'
-      //url: 'https://web.ciscospark.com/#/rooms/37f54db0-d2ee-11e4-8431-8151e0e5cc19'
+      text: 'Cisco Spark: RTP Disc Golf 2016',
+      url: 'https://web.ciscospark.com/#/rooms/37f54db0-d2ee-11e4-8431-8151e0e5cc19'
     }];
   },
   /*
