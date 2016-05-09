@@ -7,24 +7,6 @@ var SPARK_ICON = 'https://web.ciscospark.com/images/logo_spark_256px.png';
 var selectedRoom = {roomId:'', roomName:''};
 
 /*
-var parkMap = {
-  acad: 'Acadia National Park',
-  arch: 'Arches National Park',
-  badl: 'Badlands National Park',
-  brca: 'Bryce Canyon National Park',
-  crla: 'Crater Lake National Park',
-  dena: 'Denali National Park',
-  glac: 'Glacier National Park',
-  grca: 'Grand Canyon National Park',
-  grte: 'Grand Teton National Park',
-  olym: 'Olympic National Park',
-  yell: 'Yellowstone National Park',
-  yose: 'Yosemite National Park',
-  zion: 'Zion National Park'
-};
-*/
-
-/*
 var getBadges = function(t){
   return t.card('name')
   .get('name')
@@ -92,8 +74,15 @@ var cardButtonCallback = function(t){
       title: 'Cisco Spark',
       items: [
         {
-          text: selectedRoom.roomName,
-          callback: function(t) {return t.popup({title: t.text})}
+          text: 'Send to: ' + selectedRoom.roomName,
+          callback: function(t) {
+            return t.popup({
+              title: 'Success',
+              items:[
+                {text: 'Card sent successfully to: ' + selectedRoom.roomName}
+              ]
+            })
+          }
         },
         {
           text: 'Send to room...',
