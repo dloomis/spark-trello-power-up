@@ -1,13 +1,15 @@
 {
   "name": "Cisco Spark",
   "description": "",
-  "details": "A Trello Power-Up that integrates with Cisco Spark",
+  "details": "A Trello Power-Up that integrates with Cisco Spark. Includes Card Button and Board Button capabilities.",
   "icon": {
     "url": "./images/logo.png"
   },
   "author": "Dan Loomis",
   "capabilities": [
     "callback",
+    "card-buttons",
+    "board-buttons",
     "show-settings"
   ],
   "connectors": {
