@@ -205,7 +205,7 @@ TrelloPowerUp.initialize({
     }];
   },
   
-  'board-buttons': function(t, options){
+  'board-buttons': function(t, board){
     return [{
       icon: WHITE_ICON,
       text: 'Cisco Spark: RTP Disc Golf 2016'
