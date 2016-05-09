@@ -9,7 +9,6 @@
   "capabilities": [
     "callback",
     "card-buttons",
-    "board-buttons",
     "show-settings"
   ],
   "connectors": {
