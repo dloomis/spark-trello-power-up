@@ -2,8 +2,9 @@
 
 var WHITE_ICON = './images/icon-white.svg';
 var GRAY_ICON = './images/icon-gray.svg';
+var SPARK_ICON = 'https://web.ciscospark.com/images/logo_spark_256px.png';
 
-var selectedRoom = {roomId, roomName};
+var selectedRoom = {roomId:'', roomName:''};
 
 /*
 var parkMap = {
@@ -216,7 +217,7 @@ TrelloPowerUp.initialize({
     selectedRoom.roomName = 'RTP Disc Golf 2016';
     
     return [{
-      icon: './images/logo_spark_256px.png',
+      icon: SPARK_ICON,
       text: selectedRoom.roomName,
       url: 'https://web.ciscospark.com/#/rooms/' + selectedRoom.roomId
     }];
