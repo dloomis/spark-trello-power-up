@@ -6,6 +6,22 @@ var SPARK_ICON = 'https://web.ciscospark.com/images/logo_spark_256px.png';
 
 var selectedRoom = {roomId:'', roomName:''};
 
+function postSparkMessage (roomId, message) {
+ 
+  jQuery.ajax( {
+    url: 'https://api.ciscospark.com/v1/messages',
+    type: 'POST',
+    contentType: 'application/json',
+    data: { roomId:"Y2lzY29zcGFyazovL3VzL1JPT00vMDU1MzlmYjAtMjY0YS0xMWU1LWJjOWYtNDFiOWFjYzAwYTFi", text: "Hello, world!"},
+    beforeSend : function( xhr ) {
+        xhr.setRequestHeader('Authorization', 'BEARER ' + 'OTlhNjBlNGQtNDBiNS00YjA3LWE0MDMtMGFhYjdhMTFmZjBmODg3OGRjNGYtYjAy' );
+    },
+    success: function( data ) {
+       console.log(data); 
+    }
+  });
+}
+
 /*
 var getBadges = function(t){
   return t.card('name')
@@ -76,6 +92,7 @@ var cardButtonCallback = function(t){
         {
           text: 'Send to: ' + selectedRoom.roomName,
           callback: function(t) {
+            postSparkMessage(null, null);
             return t.popup({
               title: 'Message sent',
               url: './message-sent-confirmation.html'
